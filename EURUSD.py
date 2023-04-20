@@ -13,4 +13,4 @@ def connectIqOption():
 
 Iq = connectIqOption()
 CURRENCY = 'EURUSD'
-strategy = Strategy(Iq, CURRENCY, 60, 500, 1000, 1).readData()
+candle1min = Strategy(Iq, CURRENCY, 1, 500, 1000, 1).readData()

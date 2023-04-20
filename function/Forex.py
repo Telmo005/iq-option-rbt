@@ -5,14 +5,12 @@ Iq.connect()  # connect to iqoption
 instrument_type = "forex"
 instrument_id = "EURUSD"
 side = "buy"  # input:"buy"/"sell"
-amount = 1.23  # input how many Amount you want to play
+amount = 327.11  # input how many Amount you want to play
 
-leverage = Iq.get_available_leverages(instrument_type,instrument_id)
-print(leverage)
 # "leverage"="Multiplier"
-leverage = 50  # you can get more information in get_available_leverages()
+leverage = 1.500  # you can get more information in get_available_leverages()
 
-type = "market"  # input:"market"/"limit"/"stop"
+type = "limit"  # input:"market"/"limit"/"stop"
 
 # for type="limit"/"stop"
 
@@ -52,8 +50,8 @@ check, order_id = Iq.buy_order(instrument_type=instrument_type, instrument_id=in
                                use_trail_stop=use_trail_stop, auto_margin_call=auto_margin_call,
                                use_token_for_commission=use_token_for_commission)
 print(Iq.get_order(order_id))
-print(Iq.get_positions("crypto"))
-print(Iq.get_position_history("crypto"))
-print(Iq.get_available_leverages("crypto", "BTCUSD"))
-print(Iq.close_position(order_id))
-print(Iq.get_overnight_fee("crypto", "BTCUSD"))
+# print(Iq.get_positions("crypto"))
+# print(Iq.get_position_history("crypto"))
+# print(Iq.get_available_leverages("crypto", "BTCUSD"))
+# print(Iq.close_position(order_id))
+# print(Iq.get_overnight_fee("crypto", "BTCUSD"))

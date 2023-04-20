@@ -1,7 +1,6 @@
 from iqoptionapi.stable_api import IQ_Option
 
 from function.Strategy import Strategy
-from function.Strategy2 import Strategy2
 
 
 def connectIqOption():
@@ -11,6 +10,7 @@ def connectIqOption():
     print("connected ...")
     return Iq
 
+
 Iq = connectIqOption()
 CURRENCY = 'GBPJPY'
-strategy = Strategy(Iq, CURRENCY, 60, 500, 1000, 1).readData()
+candle1min = Strategy(Iq, CURRENCY, 1, 500, 1000, 1).readData()
